@@ -5,6 +5,6 @@ project('example',
             'cpp_std=c++14'
         ])
 
-exe_codegen = executable('codegen', 'codegen.cpp')
+exe_codegen = executable('codegen', 'codegen.cpp', native: true)
 src_generated = custom_target('generate_src', command: [exe_codegen, '@OUTPUT@'], output: 'main.cpp')
 executable('example', src_generated, install: true)
