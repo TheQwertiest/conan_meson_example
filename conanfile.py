@@ -298,6 +298,7 @@ class ExampleConanMeson(ConanFile):
         env_vars_to_clean = {
             'CC',
             'CXX',
+            'LD',
             'CCFLAGS',
             'CXXFLAGS',
             'CPPFLAGS',
